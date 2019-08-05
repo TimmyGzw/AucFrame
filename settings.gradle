@@ -1,2 +1,2 @@
-include ':app'
-rootProject.name='AucFrame'
+include ':app', ':lib:base', ':lib:common'
+rootProject.name = 'AucFrame'

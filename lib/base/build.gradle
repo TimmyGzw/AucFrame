@@ -10,5 +10,8 @@ dependencies {
     api Config.depConfig.plugin.kotlin_stdlib_jdk7
     api Config.depConfig.plugin.core_ktx
     api Config.depConfig.support.appcompat
+    api Config.depConfig.support.material
     api Config.depConfig.support.constraintlayout
+
+    compileOnly Config.depConfig.leakcanary.android_no_op
 }

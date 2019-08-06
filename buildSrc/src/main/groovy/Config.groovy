@@ -23,14 +23,15 @@ class Config {
             support      : [
                     appcompat       : "androidx.appcompat:appcompat:1.0.2",
                     constraintlayout: "androidx.constraintlayout:constraintlayout:1.1.3",
+                    material        : "com.google.android.material:material:1.1.0-alpha09",
             ],
             utilcode     : "com.blankj:utilcode:1.25.0",
             free_proguard: "com.blankj:free-proguard:1.0.1",
             swipe_panel  : "com.blankj:swipe-panel:1.1",
             leakcanary   : [
-                    android         : "com.squareup.leakcanary:leakcanaryandroid:$leakcanary_version",
-                    android_no_op   : "com.squareup.leakcanary:leakcanaryandroid-no-op:$leakcanary_version",
-                    support_fragment: "com.squareup.leakcanary:leakcanarysupport-fragment:$leakcanary_version",
+                    android         : "com.squareup.leakcanary:leakcanary-android:$leakcanary_version",
+                    android_no_op   : "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary_version",
+                    support_fragment: "com.squareup.leakcanary:leakcanary-support-fragment:$leakcanary_version",
             ]
     ]
 }

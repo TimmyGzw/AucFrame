@@ -1,0 +1,5 @@
+
+
+dependencies {
+    api project(":feature:feature1:pkg")
+}

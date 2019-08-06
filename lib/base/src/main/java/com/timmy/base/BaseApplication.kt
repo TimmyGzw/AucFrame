@@ -35,7 +35,7 @@ open class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         sInstance = this
-        initLeakCanary()
+        //initLeakCanary()
         initLog()
         initCrash()
     }

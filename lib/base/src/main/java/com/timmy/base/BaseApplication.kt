@@ -79,7 +79,7 @@ open class BaseApplication : Application() {
     }
 
     private fun initCrash() {
-        CrashUtils.init { crashInfo, _e ->
+        CrashUtils.init { crashInfo, _ ->
             LogUtils.e(crashInfo)
             AppUtils.relaunchApp()
         }

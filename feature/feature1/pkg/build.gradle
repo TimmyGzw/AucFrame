@@ -1,5 +1,0 @@
-
-
-dependencies {
-    api project(":feature:feature1:export")
-}

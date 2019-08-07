@@ -12,6 +12,8 @@ android {
         minSdkVersion Config.minSdkVersion
         versionCode Config.versionCode
         versionName Config.versionName
+
+        consumerProguardFiles 'proguard-rules.pro'
     }
 
     buildTypes {
@@ -23,5 +25,16 @@ android {
 
     lintOptions {
         abortOnError false
+    }
+}
+
+dependencies {
+    if (project.name == 'pkg') {
+        // if module's name equals 'pkg', api all of export
+        for (def entrySet : ConfigUtils.getApplyExports().entrySet()) {
+            api entrySet.value.dep
+        }
+    } else if (project.name == 'export') {
+        api Config.depConfig.lib.common.dep
     }
 }

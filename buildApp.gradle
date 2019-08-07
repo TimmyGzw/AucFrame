@@ -37,10 +37,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api Config.depConfig.plugin.kotlin_stdlib_jdk7
-    api Config.depConfig.plugin.core_ktx
-    api Config.depConfig.support.appcompat
-    api Config.depConfig.support.constraintlayout
+    api Config.depConfig.plugin.kotlin_stdlib_jdk7.dep
+    api Config.depConfig.plugin.core_ktx.dep
+    api Config.depConfig.support.appcompat.dep
+    api Config.depConfig.support.constraintlayout.dep
+
+    // 根据 Config.pkgConfig 来依赖所有的pkg
+    for (def entrySet : ConfigUtils.getApplyPkgs().entrySet()) {
+        api entrySet.value.dep
+    }
 }
 
 def getSuffix() {
